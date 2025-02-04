@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiches Informatives des Oiseaux</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .bigtitle {
+            width: 95%;
+            font-size: 6vw;
+            text-align: center;
+            background-color: #FFCF99;
+            margin: 6vw auto;
+            padding: 1vw;
+            border-top: 0.6vw solid;
+            color: #333333;
+        }
+
+        .allcards {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 6vw;
+        }
+
+        .card {
+            width: 28%;
+            margin: 2vw auto;
+            box-shadow: 0 0 0.5vw 0.01vw rgb(210, 210, 210);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-header {
+            text-align: center;
+            background-color: #FFF3E6;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .img {
+            width: 100%;
+        }
+
+        .card-footer {
+            height: 100%;
+            background-color: #FFF3E6;
+            color: #333333;
+        }
+
+        @media screen and (min-width : 601px) and (max-width:1000px) {
+            .bigtitle {
+                border-top: 1.5vw solid;
+                font-size: 8vw;
+            }
+
+            .allcards {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                width: 44%;
+                margin: 2vw auto;
+                box-shadow: 0 0 0.7vw 0.01vw rgb(210, 210, 210);
+            }
+        }
+
+        @media screen and (max-width : 600px) {
+            .bigtitle {
+                margin: 8vw auto;
+                padding: 1.5vw;
+                border-top: 2vw solid;
+                font-size: 10vw;
+            }
+
+            .allcards {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                width: 80%;
+                margin: 3vw auto;
+                box-shadow: 0 0 0.9vw 0.02vw rgb(210, 210, 210);
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" title="Défiler vers le haut">
+        <div class="goup">↑</div>
+    </a>
+    <div class="header">
+        <div class="logoxname">
+            <img src="multimedia/logo.jpg" class="logo">
+            <div class="sitename">Birds Around the Globe</div>
+        </div>
+        <div class="searchbar">
+            <input type="search" title="Effectuez une recherche" placeholder="Rechercher..." class="rechercher">
+        </div>
+        <div class="login">
+            <a href="2Connecter.html" target="_blank" class="connecter">Se connecter</a>
+            <a href="3Creer.html" target="_blank" class="creer">S'inscrire</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+    <!------------------------------------------------------>
+    <div class="bigtitle">Fiches Informatives des Oiseaux</div>
+    <div class="allcards">
+        <div class="card">
+            <div class="card-header">Moineau domestique</div>
+            <div class="card-body"><img src="multimedia/Moineau domestique.jpg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Passeridae</div>
+                <div><strong>Ordre :</strong> Passeriformes</div>
+                <div><strong>Taille :</strong> Environ 15 cm</div>
+                <div><strong>Pods :</strong> Environ 30 g</div>
+                <hr>
+                <div>Le moineau domestique est originaire d'Eurasie et d'Afrique du Nord.
+                    Il est très répandu dans les zones urbaines et suburbaines.
+                    Son régime alimentaire est principalement composé de graines et d'insectes.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Aigle royal</div>
+            <div class="card-body"><img src="multimedia/Aigle royal.webp" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Accipitridae</div>
+                <div><strong>Ordre :</strong> Accipitriformes</div>
+                <div><strong>Taille :</strong> Envergure d'environ 180 cm</div>
+                <div><strong>Pods :</strong> Entre 3 et 6 kg</div>
+                <hr>
+                <div>L'aigle royal a une répartition mondiale et se trouve dans divers habitats, des montagnes aux
+                    plaines.
+                    Il est un puissant prédateur se nourrissant principalement de mammifères tels que les lièvres et les
+                    marmottes.
+                    Les aigles royaux sont connus pour leurs nids massifs situés sur des falaises ou des corniches
+                    rocheuses.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Perroquet ara</div>
+            <div class="card-body"><img src="multimedia/Perroquet ara.jpg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Psittacidae</div>
+                <div><strong>Ordre :</strong> Psittaciformes</div>
+                <div><strong>Taille :</strong> Entre 80 et 90 cm</div>
+                <div><strong>Pods :</strong> Entre 1 et 1,5 kg</div>
+                <hr>
+                <div>Les aras sont originaires d'Amérique centrale et du Sud.
+                    Ils sont connus pour leur plumage coloré et leur intelligence.
+                    Les aras sont des oiseaux sociaux qui forment des liens étroits avec leurs partenaires.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Colibri à gorge rubis</div>
+            <div class="card-body"><img src="multimedia/Colibri à gorge rubis.jpg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Trochilidae</div>
+                <div><strong>Ordre :</strong> Apodiformes</div>
+                <div><strong>Taille :</strong> Environ 7 cm</div>
+                <div><strong>Pods :</strong> Environ 3 à 4 g</div>
+                <hr>
+                <div>Le colibri à gorge rubis est un colibri nord-américain.
+                    Il est connu pour son plumage iridescent et sa capacité à voler en arrière.
+                    Son régime alimentaire se compose principalement de nectar de fleurs.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Corbeau</div>
+            <div class="card-body"><img src="multimedia/Corbeau.jpg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Corvidae</div>
+                <div><strong>Ordre :</strong> Passeriformes</div>
+                <div><strong>Taille :</strong> Environ 50 cm</div>
+                <div><strong>Pods :</strong> Entre 0,7 et 1,4 kg</div>
+                <hr>
+                <div>Les corbeaux sont présents sur tous les continents, à l'exception de l'Antarctique.
+                    Ce sont des oiseaux très intelligents et sociaux, capables d'utiliser des outils pour obtenir de la
+                    nourriture.
+                    Les corbeaux ont un régime alimentaire varié, comprenant des fruits, des graines, des petits animaux
+                    et des déchets humains.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Hibou grand-duc</div>
+            <div class="card-body"><img src="multimedia/Hibou grand-duc.jpg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Strigidae</div>
+                <div><strong>Ordre :</strong> Strigiformes</div>
+                <div><strong>Taille :</strong> Environ 70 cm</div>
+                <div><strong>Pods :</strong> Entre 2 et 4 kg</div>
+                <hr>
+                <div>Le hibou grand-duc est répandu en Amérique du Nord et en Amérique du Sud.
+                    C'est l'un des plus grands hiboux, avec des plumes faciales qui ressemblent à des "cornes".
+                    Il chasse principalement la nuit, se nourrissant de petits mammifères.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Canard colvert</div>
+            <div class="card-body"><img src="multimedia/Canard colvert.jpg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Anatidae</div>
+                <div><strong>Ordre :</strong> Anseriformes</div>
+                <div><strong>Taille :</strong> Environ 50 cm</div>
+                <div><strong>Pods :</strong> Entre 0,7 et 1,6 kg</div>
+                <hr>
+                <div>Le canard colvert est originaire d'Amérique du Nord, d'Eurasie et d'Afrique du Nord.
+                    Il est commun dans une variété d'habitats aquatiques.
+                    Les canards colverts se nourrissent d'une grande variété d'aliments, y compris des insectes, des
+                    graines, et des petits poissons.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Tourterelle turque</div>
+            <div class="card-body"><img src="multimedia/Tourterelle turque.jpg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Columbidae</div>
+                <div><strong>Ordre :</strong> Columbiformes</div>
+                <div><strong>Taille :</strong> Environ 30 cm</div>
+                <div><strong>Pods :</strong> Entre 125 et 240 g</div>
+                <hr>
+                <div>La tourterelle turque a une large répartition en Europe, en Asie et en Afrique du Nord.
+                    Elle est souvent associée aux zones urbaines.
+                    Son chant doux et monotone est une caractéristique distinctive.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Pivert vert</div>
+            <div class="card-body"><img src="multimedia/Pivert vert.jpeg" class="img img-thumbnail"></div>
+            <div class="card-footer">
+                <div><strong> Famille :</strong> Picidae</div>
+                <div><strong>Ordre :</strong> Piciformes</div>
+                <div><strong>Taille :</strong> Environ 30 cm</div>
+                <div><strong>Pods :</strong> Entre 70 et 100 g</div>
+                <hr>
+                <div>Le pivert vert se trouve en Europe, en Asie et en Afrique du Nord.
+                    Il est reconnaissable par son plumage vert, sa tête rouge et son "rire" caractéristique.
+                    Les piverts verts se nourrissent d'insectes et de larves qu'ils extraient de l'écorce des arbres à
+                    l'aide de leur bec puissant.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------>
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">• Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="https://#/" class="bottomfootlink">Mentions légales</a>
+            <a href="https://#/" class="bottomfootlink">Copyright</a>
+            <a href="https://#/" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encyclopédie</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .bigtitle {
+            width: 95%;
+            font-size: 6vw;
+            text-align: center;
+            background-color: #FFCF99;
+            margin: 6vw auto;
+            padding: 1vw;
+            border-top: 0.6vw solid;
+        }
+
+        .articleleft {
+            margin-left: 7vw;
+        }
+
+        .links {
+            text-decoration: none;
+            color: black;
+            width: 100%;
+        }
+
+        .articleright {
+            margin: 0 7vw 0 auto;
+        }
+
+        .articleleft,
+        .articleright {
+            width: 60%;
+            margin-bottom: 4vw;
+            background-color: #FFF3E6;
+            padding: 0.5vw;
+            border-radius: 1vw;
+            box-shadow: 0vw 0vw 1vw 0 rgb(202, 202, 202);
+        }
+
+        .articleleft:hover,
+        .articleright:hover {
+            transform: scale(0.98);
+            transition-duration: 0.5s;
+        }
+
+        .cont {
+            position: relative;
+            margin-bottom: 1vw;
+        }
+
+        .articletitle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5vw;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+        }
+
+        .imgcontainer {
+            width: 100%
+        }
+
+        .articleimg {
+            width: 100%;
+            filter: blur(0.5vw);
+        }
+
+        .articleintro {
+            text-align: center;
+            width: 90%;
+            margin: 0 auto 2vw;
+            font-size: 1.4vw;
+        }
+
+        .articleinfo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            font-size: 1.2vw;
+        }
+
+        .eacharticleinfo {
+            width: 30%;
+            text-decoration: none;
+            color: #555;
+        }
+
+        @media screen and (min-width : 601px) and (max-width:1000px) {
+            .bigtitle {
+                font-size: 9vw;
+                border-top: 1vw solid;
+            }
+
+            .articleleft {
+                margin: auto;
+            }
+
+            .links {
+                text-decoration: none;
+                color: black;
+            }
+
+            .articleright {
+                margin: auto;
+            }
+
+            .articleleft,
+            .articleright {
+                width: 85%;
+                padding: 0.7vw;
+                margin-bottom: 6vw;
+                border-radius: 1.5vw;
+                box-shadow: 0vw 0vw 1.2vw 0 rgb(202, 202, 202);
+            }
+
+            .cont {
+                margin-bottom: 1.5vw;
+            }
+
+            .articletitle {
+                font-size: 3.5vw;
+            }
+
+            .articleimg {
+                width: 100%;
+            }
+
+            .articleintro {
+                font-size: 2.2vw;
+            }
+
+            .articleinfo {
+                font-size: 1.8vw;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .bigtitle {
+                font-size: 11vw;
+                margin: 10vw auto;
+                border-top: 1.5vw solid;
+            }
+
+            .articleleft {
+                margin: auto;
+            }
+
+            .links {
+                text-decoration: none;
+                color: black;
+                width: 100%;
+            }
+
+            .articleright {
+                margin: auto;
+            }
+
+            .articleleft,
+            .articleright {
+                width: 99%;
+                margin-bottom: 8vw;
+                padding: 1vw;
+                border-radius: 2vw;
+                box-shadow: 0vw 0vw 1.5vw 0 rgb(202, 202, 202);
+            }
+
+            .cont {
+                margin-bottom: 2vw;
+            }
+
+            .articletitle {
+                font-size: 6vw;
+            }
+
+            .articleintro {
+                width: 95%;
+                margin: 0;
+                font-size: 2.7vw;
+            }
+
+            .articleinfo {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" title="Défiler vers le haut">
+        <div class="goup">↑</div>
+    </a>
+    <div class="header">
+        <div class="logoxname">
+            <img src="multimedia/logo.jpg" class="logo">
+            <div class="sitename">Birds Around the Globe</div>
+        </div>
+        <div class="searchbar">
+            <input type="search" title="Effectuez une recherche" placeholder="Rechercher..." class="rechercher">
+        </div>
+        <div class="login">
+            <a href="2Connecter.html" target="_blank" class="connecter">Se connecter</a>
+            <a href="3Creer.html" target="_blank" class="creer">S'inscrire</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="bigtitle">Encyclopédie</div>
+    <div class="allarticles">
+        <div class="articleleft">
+            <a href="6ordresdesoiseaux.html" class="links">
+                <div class="cont">
+                    <div class="imgcontainer"><img src="multimedia/cropped-2048-768-125088.jpg" class="articleimg">
+                    </div>
+                    <div class="articletitle">Ordres des oiseaux</div>
+                </div>
+                <div class="articleintro">Un ordre d'oiseaux regroupe des espèces partageant des caractéristiques
+                    morphologiques, comportementales ou écologiques similaires.</div>
+                <div class="articleinfo">
+                    <div class="eacharticleinfo">Passériformes</div>
+                    <div class="eacharticleinfo">Accipitriformes</div>
+                    <div class="eacharticleinfo">Falconiformes</div>
+                    <div class="eacharticleinfo">Columbiformes</div>
+                    <div class="eacharticleinfo">Psittaciformes</div>
+                    <div class="eacharticleinfo">Strigiformes</div>
+                </div>
+            </a>
+        </div>
+        <div class="articleright">
+            <a href="5fichesdoiseaux.html" class="links">
+                <div class="cont">
+                    <img src="multimedia/cropped-2048-768-1335057.png" class="articleimg">
+                    <div class="articletitle">Fiches Informatives des Oiseaux</div>
+                </div>
+                <div class="articleintro">Explorez cette collection riche en diversité, et plongez-vous dans le monde
+                    varié des oiseaux, des plus petits aux plus majestueux.</div>
+                <div class="articleinfo">
+                    <div class="eacharticleinfo">Moineau domestique</div>
+                    <div class="eacharticleinfo">Aigle royal</div>
+                    <div class="eacharticleinfo">Perroquet ara</div>
+                    <div class="eacharticleinfo">Colibri à gorge rubis</div>
+                    <div class="eacharticleinfo">Corbeau</div>
+                    <div class="eacharticleinfo">Hibou grand-duc</div>
+                    <div class="eacharticleinfo">Canard colvert</div>
+                    <div class="eacharticleinfo">Tourterelle turque</div>
+                    <div class="eacharticleinfo">Pivert vert</div>
+                </div>
+            </a>
+        </div>
+        <div class="articleleft">
+            <a href="#" class="links">
+                <div class="cont">
+                    <img src="multimedia/cropped-2048-768-728538.jpg" class="articleimg">
+                    <div class="articletitle">Oiseaux Mythologiques</div>
+                </div>
+                <div class="articleintro">Les oiseaux mythologiques sont des créatures imaginaires présentes dans les
+                    légendes, les contes et les mythes de différentes cultures à travers le monde.</div>
+                <div class="articleinfo">
+                    <div class="eacharticleinfo">Garuda</div>
+                    <div class="eacharticleinfo">Simurgh</div>
+                    <div class="eacharticleinfo">Ziz</div>
+                    <div class="eacharticleinfo">Thunderbird</div>
+                    <div class="eacharticleinfo">Sirin</div>
+                    <div class="eacharticleinfo">Fenghuang</div>
+                    <div class="eacharticleinfo">Hou-ou</div>
+                    <div class="eacharticleinfo">Anzu</div>
+                </div>
+            </a>
+        </div>
+        <div class="articleright">
+            <a href="#" class="links">
+                <div class="cont">
+                    <img src="multimedia/cropped-2048-768-1342094.png" class="articleimg">
+                    <div class="articletitle">Habitats et Écologie des Oiseaux</div>
+                </div>
+                <div class="articleintro">Préparez-vous à explorer les coins les plus secrets de la planète à travers
+                    les yeux des oiseaux, et à comprendre comment ils contribuent à la complexité et à la beauté des
+                    écosystèmes qui forment notre monde.</div>
+                <div class="articleinfo">
+                    <div class="eacharticleinfo">Habitants du Ciel</div>
+                    <div class="eacharticleinfo">Oiseaux des Océans et des Lacs</div>
+                    <div class="eacharticleinfo"> Oiseaux des Espaces Boisés</div>
+                    <div class="eacharticleinfo">Les Oiseaux des Terres Arides</div>
+                    <div class="eacharticleinfo"> Oiseaux des Montagnes</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">• Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="#" class="bottomfootlink">Mentions légales</a>
+            <a href="#" class="bottomfootlink">Copyright</a>
+            <a href="#" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>

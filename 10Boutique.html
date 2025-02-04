@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Around the Globe</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .argumentation {
+            width: 60%;
+            margin: 6vw auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .creator {
+            padding: 2vw;
+
+        }
+
+        .creatimg {
+            width: 13vw;
+            box-shadow: 0.2vw 0.3vw 0.5vw rgb(218, 217, 217);
+        }
+
+        .blabla {
+            border-left: 4px solid;
+            padding: 2vw
+        }
+
+        .bigtitle {
+            width: 95%;
+            font-size: 6vw;
+            text-align: center;
+            background-color: #FFCF99;
+            margin: 6vw auto;
+            padding: 1vw;
+            border-top: 0.6vw solid;
+        }
+
+        .allcategorie {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 6vw;
+        }
+
+        .eachcategorie {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .donotsurpass {
+            overflow: hidden;
+        }
+
+        .titl {
+            background-color: #333;
+            margin: 0.7vw;
+            color: rgb(255, 157, 0);
+        }
+
+        @keyframes example {
+
+            0% {
+                position: relative;
+                top: 50%;
+                translate: 0 -50%;
+            }
+
+            100% {
+                margin-top: 0;
+            }
+        }
+
+        .allitems:hover {
+            display: flex;
+            flex-direction: column;
+            animation-name: example;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-play-state: running;
+            height: fit-content;
+        }
+
+        .item {
+            margin: 1vw;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0.2vw 0.3vw 0.5vw 0vw rgb(218, 217, 217);
+            border-radius: 10px 30px 20px 0px;
+            overflow: hidden;
+        }
+
+        .imgcont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .itemimg {
+            width: 15vw;
+        }
+
+        .iteminfo {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+            background: rgb(255, 242, 225);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert alert-danger alert-dismissible fade show m-0 text-center">
+        <button type="button" class="btn btn-dark btn-close" data-bs-dismiss="alert"></button>
+        <strong>Cette page est en cours de développement.</strong>
+    </div>
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="logoxname">
+            <img src="multimedia/logo.jpg" class="logo">
+            <div class="sitename">Birds Around the Globe</div>
+        </div>
+        <div class="searchbar">
+            <input type="search" title="Effectuez une recherche" placeholder="Rechercher..." class="rechercher">
+        </div>
+        <div class="login">
+            <a href="2Connecter.html" target="_blank" class="connecter">Se connecter</a>
+            <a href="3Creer.html" target="_blank" class="creer">S'inscrire</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <div class="argumentation">
+        <div class="creator text-center">
+            <img src="multimedia/pfpfp.jpg" class="creatimg">
+            <h5 class="mt-3">Oumous Abderrahim</h5>
+            <hr>
+            Créateur du site Birds Around the World
+        </div>
+        <div class="blabla mt-4">
+            <h4>🦜 Engagés pour les Oiseaux :</h4> Notre Contribution à la Nature
+
+            Nous croyons en la préservation de la vie aviaire et en la beauté des plumes qui ornent notre monde. C'est
+            pourquoi nous
+            sommes fiers d'annoncer que 50% de tous les bénéfices générés par votre achat iront directement à des
+            initiatives en
+            lien avec la protection et le bien-être des oiseaux.
+
+            En choisissant l'un de nos produits, vous ne faites pas seulement une déclaration de style, mais vous
+            devenez
+            également
+            un acteur de la préservation de notre environnement ailé. Les fonds collectés seront dédiés à des
+            organisations
+            dévouées
+            à la conservation des espèces, à la protection des habitats naturels et à l'éducation sur l'importance
+            cruciale
+            des
+            oiseaux dans notre écosystème.
+
+            Chaque t-shirt, mug ou produit dérivé que vous achetez contribue à la création d'un monde où le chant des
+            oiseaux
+            résonne sans entraves et où leurs couleurs éclatantes continuent d'illuminer notre ciel. Merci de vous
+            joindre à
+            nous
+            dans cette mission pour soutenir nos amis ailés et préserver la splendeur de la nature.
+
+            Votre achat compte, et ensemble, nous pouvons faire la différence pour les oiseaux qui enchantent nos vies
+            chaque jour.
+            Merci pour votre soutien continu à notre cause.
+
+            🌿 Parce que chaque achat peut faire battre plus fort le cœur de la nature. 🌿
+        </div>
+    </div>
+    <div class="bigtitle">Notre boutique</div>
+    <div class="allcategorie">
+        <div class="eachcategorie">
+            <h2 class="text-center titl p-2 ">Tasses</h2>
+            <div class="donotsurpass">
+                <div class="allitems">
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug2.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug4.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug2.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug4.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/mug5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="eachcategorie">
+            <h2 class="text-center titl p-2 ">Chapeaux</h2>
+            <div class="donotsurpass">
+                <div class="allitems">
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat2.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat4.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat2.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat4.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/hat5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="eachcategorie">
+            <h2 class="text-center titl p-2 ">T-shirts</h2>
+            <div class="donotsurpass">
+                <div class="allitems">
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt2.webp" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt4.webp" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt2.webp" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt4.webp" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/shirt5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="eachcategorie">
+            <h2 class="text-center titl p-2 ">Livres</h2>
+            <div class="donotsurpass">
+                <div class="allitems">
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book2.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book4.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book1.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book2.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book3.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book4.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgcont"> <img src="multimedia/bird logos/book5.jpg" class="itemimg"></div>
+                        <div class="iteminfo">
+                            <div class="itemname">azezae</div>
+                            <div class="itemmat">azezae</div>
+                            <div class="itemprice">azeaze</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">•
+                        Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="#" class="bottomfootlink">Mentions légales</a>
+            <a href="#" class="bottomfootlink">Copyright</a>
+            <a href="#" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>

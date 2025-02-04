@@ -1,0 +1,360 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.goup {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+    background-color: #333333;
+    color: #FF8901;
+    border: 0.1vw solid #FF8901;
+    z-index: 1001;
+}
+
+.goup:hover {
+    background-color: #000000;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.logoxname {
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+
+.logo {
+    width: 9.5vw;
+}
+
+.sitename {
+    font-size: 2.7vw;
+    margin-left: 1.5vw;
+    color: white;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    border: 0.1vw solid #FF8901;
+}
+
+.rechercher {
+    width: 20vw;
+    height: 3vw;
+    border: 0.1vw dotted #000000;
+}
+
+.rechercher:focus {
+    background-color: #FFF3E6;
+    border-radius: 0;
+}
+
+.rechercher::placeholder {
+    padding-left: 1vw;
+}
+
+.login {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+}
+
+.connecter {
+    background-color: #000000;
+    border: 0.1vw dashed #FF8901;
+    color: #FF8901;
+    padding: 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1vw;
+    margin: 1vw;
+}
+
+.connecter:hover {
+    background-color: #FF8901;
+    color: black;
+}
+
+.creer {
+    background-color: #000000;
+    border: 0.1vw solid #FF8901;
+    color: #FF8901;
+    padding: 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1vw;
+    margin: 1vw 2vw 1vw 1vw;
+}
+
+.creer:hover {
+    background-color: #FF8901;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    box-shadow: 0vw 0.2vw 0.2vw 0 #CCCCCC;
+    z-index: 1000;
+}
+
+.nav {
+    border-bottom: 0.1vw solid #FF8901;
+    color: #FF8901;
+    padding: 0.7vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2vw;
+    margin: 0vw 4vw;
+    font-weight: bold;
+}
+
+.nav:hover {
+    box-shadow: inset 0 -0.8vw 0.4vw -0.4vw #FF8901;
+    transform: scale(0.9);
+    transition-duration: 0s;
+}
+
+.resnavbar {
+    display: none;
+}
+
+.footer {
+    background-color: black;
+    box-shadow: 0vw -0.2vw 0.2vw 0 #CCCCCC;
+
+}
+
+.topfoot {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 3vw 0 2vw;
+}
+
+.footer1 {
+    margin: 0 4vw;
+    padding: 0 2vw;
+    border-left: 0.1vw solid white;
+}
+
+.topfoottitle {
+    margin-bottom: 1.3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.topfootinfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1vw;
+}
+
+.topfootinfolink {
+    margin-bottom: 0.5vw;
+    text-decoration: none;
+    color: #ffce96;
+}
+
+.bottomfoot {
+    color: white;
+    text-align: center;
+    padding-bottom: 2vw;
+}
+
+.bottomfootlink {
+    margin: 0 2vw;
+    font-size: 1vw;
+}
+
+@media screen and (max-width : 600px) {
+    .goup {
+        right: 85%;
+        padding: 2.5vw 4.5vw;
+        border-radius: 5vw;
+        border: 0.3vw solid #FF8901;
+    }
+
+    .navbar,
+    .header {
+        display: none;
+    }
+
+    .resnavbar {
+        display: flex;
+        z-index: 1000;
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+    .btn-group {
+        width: 100%;
+        background-color: #000;
+        border-radius: 0;
+        color: #FF8901;
+    }
+
+    .dropdown-toggle {
+        color: #FFA033;
+        border-radius: 0;
+        border: none;
+        margin-bottom: 1px;
+    }
+
+    .dropdown-toggle:hover {
+        background-color: #2a2a2a;
+        color: #FF8901;
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+        width: 100%;
+        background: #000;
+        border-bottom-left-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+
+    }
+
+    .dropdown-item {
+        color: #e4e4e4;
+        font-size: 3vw;
+        border-bottom: 1px solid #2a2a2a;
+    }
+
+    .dropdown-item:hover {
+        background-color: #2a2a2a;
+        color: white;
+    }
+
+    .butt {
+        color: #FFA033;
+    }
+
+    .footer {
+        box-shadow: 0vw -0.6vw 0.6vw 0 #CCCCCC;
+        margin-top: 16vw;
+    }
+
+    .topfoot {
+        padding: 3vw 0 2vw;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .footer1 {
+        width: 40%;
+        margin: 4vw;
+        padding: 0 2vw;
+    }
+
+    .topfoottitle {
+        margin-bottom: 4vw;
+        font-size: 3.6vw;
+    }
+
+    .topfootinfo {
+        font-size: 3vw;
+    }
+
+    .topfootinfolink {
+        margin-bottom: 1vw;
+    }
+
+    .bottomfoot {
+        color: white;
+        padding-bottom: 6vw;
+    }
+
+    .bottomfootlink {
+        margin: 0 4vw;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width : 601px) and (max-width:1000px) {
+    .navbar {
+        justify-content: space-evenly;
+        box-shadow: 0vw 0.4vw 0.4vw 0 #CCCCCC;
+        z-index: 1000;
+    }
+
+    .goup {
+        padding: 1.5vw 3vw;
+        border-radius: 3vw;
+        border: 0.2vw solid #FF8901;
+    }
+
+    .nav {
+        border-bottom: 0.2vw solid #FF8901;
+        color: #FF8901;
+        padding: 1vw 2vw;
+        font-size: 2vw;
+        margin: none;
+        font-weight: bold;
+    }
+
+    .nav:hover {
+        box-shadow: inset 0 -1vw 0.6vw -0.6vw #FF8901;
+    }
+
+    .footer {
+        background-color: black;
+        box-shadow: 0vw -0.2vw 0.2vw 0 #CCCCCC;
+        margin-top: 10vw;
+    }
+
+    .topfoot {
+        justify-content: space-around;
+        padding: 6vw 0 4vw;
+    }
+
+    .footer1 {
+        margin: 0 4vw;
+        padding: 0 2vw;
+        border-left: 0.2vw solid white;
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .topfoottitle {
+        margin-bottom: 2vw;
+        font-size: 2.6vw;
+    }
+
+    .topfootinfo {
+        font-size: 1.8vw;
+    }
+
+    .topfootinfolink {
+        margin-bottom: 0.7vw;
+    }
+
+    .bottomfoot {
+        padding-bottom: 4vw;
+    }
+
+    .bottomfootlink {
+        margin: 0 6vw;
+        font-size: 2vw;
+    }
+}

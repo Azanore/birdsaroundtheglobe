@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        form {
+            background-color: #ffe9cf;
+            margin: 50px 25%;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 20px 2px #CCCCCC;
+        }
+
+        .case {
+            width: 100%;
+            height: 40px;
+            border: none;
+            margin: 15px 0 0;
+        }
+
+        .bouton {
+            background-color: black;
+            color: #FFA033;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
+
+        .creationfooter1 {
+            display: flex;
+            flex-direction: row;
+            align-items: first baseline;
+            text-align: justify;
+        }
+
+        #vehicule1,
+        #vehicule2 {
+            margin-right: 10px;
+        }
+
+        .form-control {
+            border-left: 5px solid;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid;
+        }
+
+        .dejacompte {
+            margin: 10px 0;
+        }
+
+        @media screen and (min-width : 601px) and (max-width:1000px) {
+            form {
+                margin: 50px 12%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            form {
+                margin: 50px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+    <form action="1Acceuil.html" class="was-validated">
+        <div class="text-center h1">Inscrivez-vous !</div>
+        <div class="mb-3 mt-3">
+            <label for="uname" class="form-label">Nom d'utilisateur :</label>
+            <input type="text" class="form-control" id="uname" placeholder="Saisir un nom d'utilisateur" name="uname"
+                required minlength="8" maxlength="16">
+            <div class="valid-feedback">Valide.</div>
+            <div class="invalid-feedback">Merci de remplir ce champ.</div>
+        </div>
+        <div class="mb-3">
+            <label for="mail" class="form-label">E-mail :</label>
+            <input type="email" class="form-control" id="mail" placeholder="Saisir votre adresse e-mail" name="pswd"
+                required>
+            <div class="valid-feedback">Valide.</div>
+            <div class="invalid-feedback">Merci de remplir ce champ.</div>
+        </div>
+        <div class="mb-3">
+            <label for="pwd" class="form-label">Mot de passe :</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Saisir votre mot de passe" name="pswd"
+                minlength="8" required>
+            <div class="valid-feedback">Valide.</div>
+            <div class="invalid-feedback">Merci de remplir ce champ.</div>
+        </div>
+        <div class="mb-3">
+            <label for="repwd" class="form-label">Ressaisir le mot de passe :</label>
+            <input type="password" class="form-control" id="repwd" placeholder="Ressaisir votre mot de passe"
+                name="pswd" required>
+            <div class="valid-feedback">Valide.</div>
+            <div class="invalid-feedback">Merci de remplir ce champ.</div>
+        </div>
+        <div class="mb-3">
+            <label for="dadate" class="form-label">Date de naissance :</label>
+            <input type="date" class="form-control" id="dadate" name="pswd" required>
+            <div class="valid-feedback">Valide.</div>
+            <div class="invalid-feedback">Merci de remplir ce champ.</div>
+        </div>
+        <div class="creationfooter">
+            <div class="creationfooter1">
+                <input type="checkbox" id="vehicule1" name="vehicule1" value="velo" required>
+                <label for="vehicule1"> Je souhaite recevoir des actualités</label>
+            </div>
+            <br>
+            <div class="creationfooter1">
+                <input type="checkbox" id="vehicule2" name="vehicule1" value="velo" required>
+                <label for="vehicule2"> En vous inscrivant, vous confirmez avoir lu, compris et accepter les <a
+                        href="#">Conditions d'utilisation</a> et la <a href="#">Politique de confidentialité</a> ainsi
+                    qu'être informé(e) de votre droit à l'information.</label><br>
+            </div>
+        </div>
+        <div class="dejacompte">
+            Vous avez déjà un compte ? <a href="2Connecter.html">Connectez-vous !</a>
+        </div>
+        <input type="submit" value="S'inscrire" class="case bouton">
+    </form>
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">• Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="#" class="bottomfootlink">Mentions légales</a>
+            <a href="#" class="bottomfootlink">Copyright</a>
+            <a href="#" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>

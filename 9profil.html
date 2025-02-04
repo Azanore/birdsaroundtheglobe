@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Around the Globe</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            min-height: 100vh;
+        }
+
+        .userprofile {
+            width: 80%;
+            margin: auto;
+            display: flex;
+        }
+
+        .left {
+            width: 70%;
+        }
+
+        .right {
+            width: 30%;
+        }
+
+        .allmedaille {
+            text-align: center;
+        }
+
+        .eachstat {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .medaille {
+            width: 4vw;
+            border: 2px solid rgb(255, 209, 73);
+            margin: 1vw;
+            padding: 0.3vw;
+            box-shadow: 0 0 10px 2px burlywood;
+            outline: 3px solid;
+            outline-offset: 3px;
+            background-color: rgb(252, 247, 240);
+
+        }
+
+        .friendimg {
+            width: 2vw;
+            margin-right: 1vw;
+        }
+
+        .friend {
+            display: flex;
+        }
+
+        .justabout {
+            display: flex;
+        }
+
+        .rounded-circle {
+            width: 10vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert alert-danger alert-dismissible fade show m-0 text-center">
+        <button type="button" class="btn btn-dark btn-close" data-bs-dismiss="alert"></button>
+        <strong>Cette page est en cours de développement.</strong>
+    </div>
+    <div class="header">
+        <div class="logoxname">
+            <img src="multimedia/logo.jpg" class="logo">
+            <div class="sitename">Birds Around the Globe</div>
+        </div>
+        <div class="searchbar">
+            <input type="search" title="Effectuez une recherche" placeholder="Rechercher..." class="rechercher">
+        </div>
+        <div class="login">
+            <a href="2Connecter.html" target="_blank" class="connecter">Se connecter</a>
+            <a href="3Creer.html" target="_blank" class="creer">S'inscrire</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="userprofile my-5">
+        <div class="left">
+            <div class="userallabout border">
+                <h4>A propos</h4>
+                <div class="justabout">
+                    <div class="userimg"><img src="multimedia/woman-volunteer-icon.png" class="border rounded-circle">
+                    </div>
+                    <div class="userinfo mt-4">
+                        <div class="username">Jade Frol</div>
+                        <div class="userbadge">
+                            <div class="badge bg-primary">Enginner</div>
+                            <div class="badge bg-primary">Master</div>
+                            <div class="badge bg-primary">Master</div>
+                        </div>
+                        <div class="userabout">Hi !im Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptatum,
+                            eveniet tempora. Odio quae dolor suscipit amet quisquam temporibus ex aliquid neque, officia
+                            totam
+                            repellendus assumenda molestiae libero. Non, magni quis.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recently border">
+                <h4>Commentaires</h4>
+                <div class="comment">
+                    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+                        numquam maiores corporis dolores impedit, debitis amet ullam quaerat velit aspernatur eius!
+                        Praesentium facere tenetur sunt ipsam neque quis reiciendis sit.
+                    </div>
+                    <div style="text-align:end">06-01-2023 15:26</div>
+                </div>
+                <div class="comment">
+                    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+                        numquam maiores corporis dolores impedit, debitis amet ullam quaerat velit aspernatur eius!
+                        Praesentium facere tenetur sunt ipsam neque quis reiciendis sit.
+                    </div>
+                    <div style="text-align:end">06-01-2023 15:26</div>
+                </div>
+                <button class="btn btn-danger">Afficher plus</button>
+            </div>
+        </div>
+        <div class="right">
+
+            <div class="success border">
+                <h4>Medailles</h4>
+                <div class="allmedaille">
+                    <img class="medaille" src="multimedia/medailles/medaille (1).png">
+                    <img class="medaille" src="multimedia/medailles/medaille.png">
+                    <img class="medaille" src="multimedia/medailles/medaille (2).png">
+                    <img class="medaille" src="multimedia/medailles/medaille (3).png">
+                    <img class="medaille" src="multimedia/medailles/medaille (4).png">
+                    <img class="medaille" src="multimedia/medailles/medaille (5).png">
+                    <img class="medaille" src="multimedia/medailles/medaille (6).png">
+                    <img class="medaille" src="multimedia/medailles/medaille (7).png">
+                    <img class="medaille" src="multimedia/medailles/diplome.png">
+                </div>
+            </div>
+            <div class="stats border">
+                <h4>Stats</h4>
+                <div class="allstats">
+                    <div class="eachstat">
+                        <div>Membre depuis</div>
+                        <div>18-02-2015</div>
+                    </div>
+                    <div class="eachstat">
+                        <div>Reactions</div>
+                        <div>786</div>
+                    </div>
+                    <div class="eachstat">
+                        <div>Commentaires</div>
+                        <div>87</div>
+                    </div>
+                    <div class="eachstat">
+                        <div>Temps passé sur le site</div>
+                        <div>1705h</div>
+                    </div>
+                    <div class="eachstat">
+                        <div>Classement</div>
+                        <div>78</div>
+                    </div>
+                </div>
+            </div>
+            <div class="userfriends border">
+                <h4>Friends</h4>
+                <div class="allfriends">
+                    <div class="friend">
+                        <img class="friendimg" src="multimedia/ajouter-un-utilisateur (1).png">
+                        <div class="friendname">Yolo Eklo</div>
+                    </div>
+                    <div class="friend">
+                        <img class="friendimg" src="multimedia/ajouter-un-utilisateur (1).png">
+                        <div class="friendname">Yolo Eklo</div>
+                    </div>
+                    <div class="friend">
+                        <img class="friendimg" src="multimedia/ajouter-un-utilisateur (1).png">
+                        <div class="friendname">Yolo Eklo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">•
+                        Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="#" class="bottomfootlink">Mentions légales</a>
+            <a href="#" class="bottomfootlink">Copyright</a>
+            <a href="#" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>

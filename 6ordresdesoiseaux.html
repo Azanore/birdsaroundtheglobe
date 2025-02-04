@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordres des Oiseaux</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .bigtitle {
+            width: 95%;
+            font-size: 6vw;
+            text-align: center;
+            background-color: #FFCF99;
+            margin: 6vw auto;
+            padding: 1vw;
+            border-top: 0.6vw solid;
+            color: #333333;
+        }
+
+        .main {
+            margin: auto;
+            width: 90%;
+            margin-bottom: 6vw;
+        }
+
+        div {
+            text-align: justify;
+        }
+
+        span {
+            font-weight: 600;
+        }
+
+        .article1 {
+            width: 80%;
+            margin: 0 0 0 2vw;
+            border-radius: 2.5vw;
+            background-color: #FFF3E6;
+            padding: 1vw;
+            color: #333333;
+        }
+
+        .article2 {
+            width: 80%;
+            margin: 0 2vw 0 auto;
+            border-radius: 2.5vw;
+            background-color: #FFF3E6;
+            padding: 1vw;
+            color: #333333;
+        }
+
+        .titre {
+            font-size: 3vw;
+            text-align: center;
+            margin: 1vw;
+            font-weight: bolder;
+        }
+
+        .intro {
+            margin: 0 3vw;
+            text-indent: 4vw;
+        }
+
+        .texte {
+            margin: 0 3vw;
+        }
+
+        .conclu {
+            margin: 0 3vw 3vw;
+            text-indent: 4vw;
+        }
+
+        .img1 {
+            width: 20vw;
+            float: left;
+            margin: 1vw 2vw 1vw 0;
+            border-radius: 2.5vw;
+            box-sizing: border-box;
+            border: 0.3vw dashed white;
+        }
+
+        .img2 {
+            width: 20vw;
+            float: right;
+            margin: 1vw 0 1vw 2vw;
+            border-radius: 2.5vw;
+            box-sizing: border-box;
+            border: 0.3vw dashed white;
+        }
+
+        hr {
+            width: 50%;
+            margin: 2vw auto;
+        }
+
+        .comment {
+            padding: 4vw 15vw;
+            box-shadow: 0 0.1vw 2vw 0vw #FFCF99;
+        }
+
+        .cmnterinfo {
+            display: flex;
+            flex: row;
+            justify-content: space-between;
+            font-size: 80%;
+            margin-bottom: 0.5vw;
+        }
+
+        .cmnt1 {
+            margin-bottom: 4vw;
+            padding: 2vw;
+            background-color: #FFF3E6;
+            border: 1px solid;
+            border-top-right-radius: 2vw;
+            border-bottom-left-radius: 2vw;
+        }
+
+        .cmnttext {
+            display: flex;
+
+        }
+
+        .cmnticon {
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .checky {
+            display: none;
+        }
+
+        .sentimg {
+            display: none;
+        }
+
+        .checky:checked+.imgcont .sentimg {
+            display: inline;
+        }
+
+        .checky:checked+.imgcont .addimg {
+            display: none;
+        }
+
+        .lefticons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3vw;
+        }
+
+        .cmnttextleft {
+            margin-right: 2vw;
+            border: 1px solid;
+            padding: 1vw 1vw 0 1vw;
+            height: fit-content;
+            background-color: #FFF;
+        }
+
+        .dpmenu {
+            width: max-content;
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+        }
+
+        .report {
+            width: 100%;
+            background-color: #000000;
+            color: #ff8800;
+            border-radius: 5px;
+        }
+
+        .cmnttextpfp {
+            width: 6vw;
+            height: 6vw;
+            border: 1px solid;
+            background-color: #FFF3E6;
+        }
+
+        .inputcmnt {
+            width: 100%;
+            border: 0;
+            height: 6vw;
+            text-align: justify;
+            outline: 0;
+            resize: none;
+        }
+
+        .cmnttexttext {
+            border: 1px solid;
+            padding: 1vw;
+            display: flex;
+            flex-direction: column;
+            background-color: #FFF;
+            width: 100%;
+        }
+
+        .cmnttexttexttext {
+            margin-bottom: 1vw;
+        }
+
+        .cmnttexttexticons {
+            display: flex;
+            align-items: center;
+        }
+
+        .cmnttextexticon1 {
+            width: 2.5vw;
+            border-radius: 100vw;
+            margin: 0 0.5vw;
+        }
+
+        .zbtn1,
+        .zbtn2 {
+            display: none
+        }
+
+        .zbtn1:checked+.cmnttextexticon1 {
+            background-color: #11ff00;
+        }
+
+        .zbtn2:checked+.cmnttextexticon1 {
+            background-color: #ff0000;
+        }
+
+        /******************************/
+        /******************************/
+        /******************************/
+        /******************************/
+        /******************************/
+        @media screen and (max-width : 600px) {
+            .bigtitle {
+                width: 95%;
+                font-size: 10.5vw;
+                margin: 10vw auto;
+                padding: 1vw;
+                border-top: 1.3vw solid;
+            }
+
+            .main {
+                width: 100%;
+            }
+
+            .article1 {
+                width: 95%;
+                margin: auto;
+                border-radius: 5vw;
+            }
+
+            .article2 {
+                width: 95%;
+                margin: auto;
+                border-radius: 5vw;
+            }
+
+            .titre {
+                font-size: 6vw;
+                text-align: center;
+                margin: 2vw;
+            }
+
+            .intro {
+                margin: 0 2vw;
+                text-indent: 6vw;
+                font-size: 3vw;
+            }
+
+            .texte {
+                font-size: 3vw;
+                margin: 0 2vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .conclu {
+                margin: 0 2vw 1vw;
+                text-indent: 6vw;
+                font-size: 3vw;
+            }
+
+            .img1 {
+                width: 90%;
+                float: none;
+                margin: 2vw auto;
+                border-radius: 5vw;
+                border: 1vw dashed white;
+            }
+
+            .img2 {
+                width: 90%;
+                float: none;
+                margin: 2vw auto;
+                border-radius: 5vw;
+                border: 1vw dashed white;
+            }
+
+            hr {
+                width: 50%;
+                margin: 4vw auto;
+            }
+        }
+
+        /******************************/
+        /******************************/
+        /******************************/
+        /******************************/
+        /******************************/
+        @media screen and (min-width:601px) and (max-width:1000px) {
+            .bigtitle {
+                width: 95%;
+                font-size: 10vw;
+                margin: 10vw auto;
+                padding: 1vw;
+                border-top: 1vw solid;
+            }
+
+            .main {
+                width: 100%;
+            }
+
+            .article1 {
+                width: 90%;
+                margin: auto;
+                border-radius: 5vw;
+            }
+
+            .article2 {
+                width: 90%;
+                margin: auto;
+                border-radius: 5vw;
+            }
+
+            .titre {
+                font-size: 5vw;
+                text-align: center;
+                margin: 2vw;
+            }
+
+            .intro {
+                margin: 0 2vw;
+                text-indent: 4vw;
+                font-size: 2.5vw;
+            }
+
+            .texte {
+                font-size: 2.5vw;
+                margin: 0 2vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .conclu {
+                margin: 0 2vw 1vw;
+                text-indent: 4vw;
+                font-size: 2.5vw;
+            }
+
+            .img1 {
+                width: 80%;
+                float: none;
+                margin: 1vw auto;
+                border-radius: 5vw;
+                border: 0.5vw dashed white;
+            }
+
+            .img2 {
+                width: 80%;
+                float: none;
+                margin: 1vw auto;
+                border-radius: 5vw;
+                border: 0.5vw dashed white;
+            }
+
+            hr {
+                width: 50%;
+                margin: 2vw auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" title="Défiler vers le haut">
+        <div class="goup">↑</div>
+    </a>
+    <div class="alert alert-danger alert-dismissible fade show m-0 text-center">
+        <button type="button" class="btn btn-dark btn-close" data-bs-dismiss="alert"></button>
+        <strong>Cette page est en cours de développement.</strong>
+    </div>
+    <div class="header">
+        <div class="logoxname">
+            <img src="multimedia/logo.jpg" class="logo">
+            <div class="sitename">Birds Around the Globe</div>
+        </div>
+        <div class="searchbar">
+            <input type="search" title="Effectuez une recherche" placeholder="Rechercher..." class="rechercher">
+        </div>
+        <div class="login">
+            <a href="2Connecter.html" target="_blank" class="connecter">Se connecter</a>
+            <a href="3Creer.html" target="_blank" class="creer">S'inscrire</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="bigtitle">Ordres des Oiseaux</div>
+    <div class="main">
+        <div class="article1">
+            <div class="titre">Les Passériformes</div>
+            <div class="intro">Les Passériformes, également connus sous le nom d'oiseaux chanteurs, forment l'ordre le
+                plus vaste et diversifié d'oiseaux, comprenant plus de la moitié de toutes les espèces d'oiseaux
+                connues. Voici quelques informations supplémentaires sur les Passériformes :</div>
+            <div class="texte">
+                <img src="multimedia/vrvr (1).jpg" class="img2">
+                <ul>
+                    <li type="disc"><span>Caractéristiques physiques</span> : Les Passériformes se caractérisent par des
+                        pieds adaptés à la perche, avec trois doigts orientés vers l'avant et un vers l'arrière, ce qui
+                        facilite leur habillement sur les branches. Leur bec est également souvent conique, adapté à une
+                        alimentation variée.</li>
+                    <li type="disc"><span>Répartition </span>: Les Passériformes sont présents sur tous les continents,
+                        depuis les régions polaires jusqu'aux régions équatoriales. Ils occupent une grande diversité
+                        d'habitats, des forêts aux déserts en passant par les zones urbaines.</li>
+                    <li type="disc"><span>Alimentation </span>: Le régime alimentaire des Passériformes est très varié.
+                        Il peut inclure des graines, des fruits, des insectes, des nectars et même de petits vertébrés.
+                        Cette polyvalence alimentaire contribue à leur succès écologique.</li>
+                    <li type="disc"><span>Comportement </span>: Les oiseaux chanteurs sont souvent connus pour leurs
+                        compétences vocales complexes. Leur chant peut servir à marquer un territoire, à attirer un
+                        partenaire ou à communiquer avec d'autres membres de leur groupe.</li>
+                    <li type="disc"><span>Reproduction </span>: La plupart des Passériformes sont monogames et ont des
+                        nids bien construits. Les espèces varient considérablement en termes de taille de la couvée, du
+                        nombre d'œufs et des soins parentaux.</li>
+                </ul>
+                <img src="multimedia/vrvr (2).jpg" class="img1">
+                <ul>
+                    <li type="disc"><span>Exemples de familles</span> : Les Passériformes comprennent de nombreuses
+                        familles, dont les fringillidés (pinsons, chardonnerets), les Paridés (mésanges), les Turdidés
+                        (merles, grives), les Hirundinidés (hirondelles), et bien d'autres.</li>
+                    <li type="disc"><span>Migrations </span>: De nombreuses espèces de Passériformes sont migratrices,
+                        parcourant de longues distances entre leurs aires de reproduction et d'hivernage. Les migrations
+                        peuvent être spectaculaires et peuvent couvrir des milliers de kilomètres.</li>
+                    <li type="disc"><span>Adaptation à l'environnement urbain </span>: Certains Passériformes, tels que
+                        les moineaux domestiques, se sont bien adaptés aux environnements urbains et sont souvent
+                        associés à la présence humaine.</li>
+                </ul>
+            </div>
+            <div class="conclu">Les Passériformes sont incroyablement diversifiés, tant en termes de taille que de
+                comportement, et ils jouent un rôle essentiel dans les écosystèmes en tant que pollinisateurs,
+                contrôleurs d'insectes et indicateurs de la santé environnementale.
+            </div>
+        </div>
+        <hr>
+        <div class="article2">
+            <div class="titre">Les Accipitriformes</div>
+            <div class="intro">Les Accipitriformes sont un ordre d'oiseaux de proie diurnes, comprenant un certain
+                nombre de rapaces prédateurs. Voici quelques informations supplémentaires sur les Accipitriformes :
+            </div>
+            <div class="texte">
+                <img src="multimedia/800px-Bald.eagle.closeup.arp-sh.750pix.jpg" class="img1">
+                <ul>
+                    <li type="disc"><span>Caractéristiques physiques </span>: Les Accipitriformes partagent des
+                        caractéristiques physiques communes telles que des becs crochus et tranchants, des serres
+                        puissantes, une excellente vision, et des ailes larges et puissantes pour le vol.</li>
+                    <li type="disc"><span>Répartition </span>: On trouve des membres de l'ordre Accipitriformes sur tous
+                        les continents, à l'exception de l'Antarctique. Ils occupent une variété d'habitats, des forêts
+                        et des zones montagneuses aux zones ouvertes et aux plaines.</li>
+                    <li type="disc"><span>Alimentation </span>: Les Accipitriformes sont des prédateurs carnivores se
+                        nourrissant principalement de proies vivantes. Leur régime alimentaire peut comprendre des
+                        mammifères, des oiseaux, des reptiles, et même des poissons dans le cas de certaines espèces.
+                    </li>
+                    <li type="disc"><span>Familles </span>: Les Accipitriformes comprennent plusieurs familles, dont les
+                        Accipitridés, les Pandionidés, et les Sagittariidés. Les aigles, les buses, les balbuzards, et
+                        les vautours font partie de ces familles.</li>
+                    <li type="disc"><span>Migration </span>: Certaines espèces d'Accipitriformes sont migratrices et
+                        peuvent parcourir de grandes distances entre leurs aires de reproduction et d'hivernage. Ces
+                        migrations peuvent être spectaculaires et sont souvent observées dans les régions où ces oiseaux
+                        sont présents.</li>
+                </ul>
+                <img src="multimedia/vautour-fauve-et-choucas-des-tours-page.jpg" class="img2">
+                <ul>
+                    <li type="disc"><span>Reproduction</span> : La reproduction varie d'une espèce à l'autre, mais en
+                        général, les Accipitriformes construisent des nids volumineux situés en hauteur, souvent sur des
+                        arbres ou des falaises. Les couples peuvent rester ensemble pendant plusieurs saisons de
+                        reproduction.</li>
+                    <li type="disc"><span>Rôle écologique </span>: Les Accipitriformes jouent un rôle important dans le
+                        maintien de l'équilibre écologique en régulant les populations de petits mammifères et
+                        d'oiseaux. Certains, comme les vautours, ont un rôle écologique crucial en éliminant les
+                        carcasses d'animaux morts.</li>
+                    <li type="disc"><span>Conservation </span>: Certains membres de l'ordre, en particulier les
+                        vautours, sont confrontés à des défis de conservation en raison de menaces telles que
+                        l'empoisonnement, la perte d'habitat et la chasse.</li>
+                </ul>
+            </div>
+            <div class="conclu">Les Accipitriformes représentent un groupe fascinant d'oiseaux de proie, chacun adapté à
+                son propre environnement et jouant un rôle spécifique dans les écosystèmes auxquels ils appartiennent.
+            </div>
+        </div>
+        <hr>
+        <div class="article1">
+            <div class="titre">Les Falconiformes</div>
+            <div class="intro">Les Falconiformes, également connus sous le nom de faucons et rapaces apparentés, forment
+                un ordre d'oiseaux de proie diurnes. Voici quelques informations supplémentaires sur les Falconiformes :
+            </div>
+            <div class="texte">
+                <img src="multimedia/falconiformes.jpg" class="img2">
+                <ul>
+                    <li type="disc"><span>Caractéristiques physiques </span>: Les Falconiformes partagent certaines
+                        caractéristiques physiques avec les Accipitriformes, tels que des becs crochus et tranchants,
+                        des serres puissantes et une excellente vision. Cependant, les Falconiformes ont souvent des
+                        ailes plus étroites et une silhouette plus élancée, adaptées à un vol rapide et agile.</li>
+                    <li type="disc"><span>Répartition </span>: Les Falconiformes sont présents sur tous les continents à
+                        l'exception de l'Antarctique. Ils occupent divers habitats, des zones ouvertes aux forêts, en
+                        passant par les zones montagneuses.</li>
+                    <li type="disc"><span>Alimentation </span>: Les Falconiformes sont des prédateurs carnivores se
+                        nourrissant principalement de proies vivantes. Contrairement à d'autres rapaces qui chassent en
+                        planant, les faucons sont connus pour leur technique de chasse en piqué, où ils plongent
+                        rapidement sur leurs proies.</li>
+                    <li type="disc"><span>Familles </span>: Les Falconiformes comprennent plusieurs familles, dont les
+                        Falconidés et les Sagittariidés. Les faucons, les caracaras et les crécerelles font partie de
+                        ces familles.</li>
+                    <li type="disc"><span>Vol </span>: Les Falconiformes sont réputés pour leur vol rapide et
+                        acrobatique. Les faucons en particulier sont capables de voler à des vitesses élevées, parfois
+                        en excédant 300 kilomètres par heure en descente.</li>
+                </ul>
+                <img src="multimedia/faucon-gerfaut.jpg" class="img1">
+                <ul>
+                    <li type="disc"><span>Reproduction </span>: Les faucons construisent généralement des nids sur des
+                        falaises, des arbres ou même sur des bâtiments. Les couples de faucons peuvent être monogames et
+                        rester ensemble pendant plusieurs saisons de reproduction.</li>
+                    <li type="disc"><span>Rôle écologique </span>: Les Falconiformes jouent un rôle crucial dans le
+                        contrôle des populations de petits mammifères et d'oiseaux. Leur présence contribue à
+                        l'équilibre des écosystèmes.</li>
+                    <li type="disc"><span>Domestication </span>: Certains faucons, en particulier le faucon pèlerin, ont
+                        été utilisés historiquement dans la fauconnerie, une pratique ancienne de chasse où des oiseaux
+                        de proie sont dressés pour capturer des proies pour les fauconniers.</li>
+                    <li type="disc"><span>Conservation </span>: Certains faucons peuvent être confrontés à des menaces
+                        telles que la perte d'habitat, l'empoisonnement par les pesticides, et la chasse illégale.</li>
+                </ul>
+            </div>
+            <div class="conclu">Les Falconiformes représentent un groupe diversifié d'oiseaux de proie, adaptés à des
+                modes de vie variés et jouant des rôles importants dans leurs écosystèmes respectifs.</div>
+        </div>
+        <hr>
+        <div class="article2">
+            <div class="titre">Les Columbiformes</div>
+            <div class="intro">Les Columbiformes forment un ordre d'oiseaux qui comprend les colombes et les
+                tourterelles. Voici quelques informations supplémentaires sur les Columbiformes :</div>
+            <div class="texte">
+                <img src="multimedia/800px-Columbina_talpacoti_1.jpg" class="img1">
+                <ul>
+                    <li type="disc"><span>Caractéristiques physiques </span>: Les Columbiformes ont généralement un
+                        corps arrondi, une petite tête, un bec droit et des pattes courtes. Leurs pattes sont adaptées à
+                        la perche, et ils ont souvent une démarche caractéristique de picorage.</li>
+                    <li type="disc"><span>Répartition </span>: Les colombes et les tourterelles sont présentes sur tous
+                        les continents, à l'exception de l'Antarctique. Elles occupent divers habitats, des forêts aux
+                        zones urbaines.</li>
+                    <li type="disc"><span>Alimentation </span>: Les Columbiformes sont principalement herbivores, se
+                        nourrissant de graines, de fruits et parfois d'insectes. Ils ont une digestion spécialisée qui
+                        leur permet de consommer des graines dures.</li>
+                    <li type="disc"><span>Comportement </span>: Les colombes sont souvent associées à la paix et à la
+                        tranquillité en raison de leur comportement calme et de leurs vocalisations douces. Certaines
+                        espèces sont connues pour leur capacité à effectuer des vols longue distance.</li>
+                    <li type="disc"><span>Reproduction </span>: Les colombes forment généralement des couples monogames
+                        et peuvent produire plusieurs couvées par an. Le nid est souvent construit avec des brindilles
+                        et peut être situé dans les arbres, sur les corniches des bâtiments ou même sur le sol.</li>
+                </ul>
+                <img src="multimedia/Rock_Pigeon_Columba_livia.jpg" class="img2">
+                <ul>
+                    <li type="disc"><span>Communication </span>: Les Columbiformes utilisent des vocalisations douces
+                        pour communiquer entre eux. Les tourterelles sont parfois connues pour leur roucoulement
+                        caractéristique.</li>
+                    <li type="disc"><span>Espèces notables</span> : Parmi les Columbiformes, on trouve des espèces
+                        familières comme la colombe domestique (Colomba livia), souvent élevée comme oiseau de
+                        compagnie, et la tourterelle triste (Zenaida macroura), présente en Amérique du Nord.</li>
+                    <li type="disc"><span>Importance culturelle </span>: Les colombes sont parfois symboliques dans de
+                        nombreuses cultures et religions, souvent associées à la paix, à l'amour et à la spiritualité.
+                    </li>
+                    <li type="disc"><span>Conservation </span>: Dans l'ensemble, de nombreuses espèces de Columbiformes
+                        ne sont pas considérées comme menacées. Cependant, la destruction de l'habitat, la chasse et
+                        d'autres pressions humaines peuvent affecter certaines populations.</li>
+                </ul>
+            </div>
+            <div class="conclu">Les Columbiformes sont des oiseaux répandus et familiers, et bien qu'ils puissent
+                sembler simples, ils jouent un rôle important dans les écosystèmes où ils vivent. Leur proximité avec
+                les humains les a également rendus significatifs sur le plan culturel.</div>
+        </div>
+        <hr>
+        <div class="article1">
+            <div class="titre">Les Psittaciformes</div>
+            <div class="intro">Les Psittaciformes forment un ordre d'oiseaux qui comprend les perroquets, les cacatoès,
+                les perruches et d'autres espèces connexes. Voici quelques informations supplémentaires sur les
+                Psittaciformes :</div>
+            <div class="texte">
+                <img src="multimedia/ara-chloroptera_b26bd4cfa565a8d0b768f12031523fa8.jpg" class="img2">
+                <ul>
+                    <li type="disc"><span>Caractéristiques physiques </span>: Les Psittaciformes sont caractérisés par
+                        leur bec puissant et crochu, adapté à la fois pour casser les graines et manipuler les objets.
+                        Ils ont également des pattes zygodactyles, avec deux doigts orientés vers l'avant et deux vers
+                        l'arrière, ce qui facilite leur grimper et leur manipulation d'objets.</li>
+                    <li type="disc"><span>Répartition </span>: Les perroquets sont originaires de nombreuses régions du
+                        monde, principalement des zones tropicales et subtropicales. Ils se trouvent en Amérique du Sud,
+                        en Australie, en Afrique, en Asie et dans certaines îles du Pacifique.</li>
+                    <li type="disc"><span>Diversité </span>: Les Psittaciformes sont incroyablement diversifiés en
+                        termes de taille, de couleur et de comportement. Ils varient de petites perruches aux grands
+                        aras et cacatoès.</li>
+                    <li type="disc"><span>Alimentation </span>: Le régime alimentaire des Psittaciformes est varié et
+                        peut inclure des graines, des fruits, des noix, des baies, des nectars et des insectes. Certains
+                        perroquets domestiques peuvent également être nourris avec des aliments spécialement formulés.
+                    </li>
+                    <li type="disc"><span>Intelligence</span> : Les perroquets sont connus pour leur intelligence élevée
+                        et leur capacité à apprendre des comportements complexes. Certains peuvent imiter les sons, y
+                        compris la parole humaine, et ont une bonne mémoire.</li>
+                </ul>
+                <img src="multimedia/images.jpeg" class="img1">
+                <ul>
+                    <li type="disc"><span>Vocalisations </span>: Les Psittaciformes sont réputés pour leurs
+                        vocalisations variées. Certains perroquets, comme les aras et les cacatoès, peuvent être
+                        particulièrement bruyants. Les perruches et les inséparables sont également connus pour leurs
+                        vocalisations.</li>
+                    <li type="disc"><span>Sociabilité </span>: Beaucoup de perroquets sont des animaux sociaux qui
+                        vivent en groupes dans la nature. Certains, comme les aras, peuvent former des liens étroits
+                        avec leurs propriétaires humains.</li>
+                    <li type="disc"><span>Reproduction </span>: Les Psittaciformes se reproduisent en construisant des
+                        nids, souvent dans des creux d'arbres. Certains perroquets, comme les cacatoès, forment des
+                        liens monogames durables, tandis que d'autres peuvent être plus sociaux dans leurs relations.
+                    </li>
+                    <li type="disc"><span>Élevage en captivité </span>: En raison de leur beauté, de leur intelligence
+                        et de leur capacité à apprendre, de nombreux Psittaciformes sont élevés en captivité comme
+                        animaux de compagnie. Cependant, l'élevage responsable et la fourniture d'un environnement
+                        stimulant sont essentiels pour leur bien-être.</li>
+                    <li type="disc"><span>Conservation </span>: Certains Psittaciformes sont menacés en raison de la
+                        perte d'habitat, du commerce illégal d'oiseaux et d'autres menaces. Des efforts de conservation
+                        sont déployés pour protéger ces espèces et leurs habitats.</li>
+                </ul>
+            </div>
+            <div class="conclu">Les Psittaciformes sont des oiseaux fascinants, à la fois dans leur environnement
+                naturel et en tant qu'animaux de compagnie. Cependant, en raison de leur intelligence et de leurs
+                besoins spécifiques, ils nécessitent des soins attentifs et une compréhension approfondie de leurs
+                besoins pour prospérer en captivité.</div>
+        </div>
+        <hr>
+        <div class="article2">
+            <div class="titre">Les Strigiformes</div>
+            <div class="intro">Les Strigiformes constituent l'ordre des oiseaux de proie nocturnes, englobant les hiboux
+                et les chouettes. Voici quelques informations supplémentaires sur les Strigiformes :</div>
+            <div class="texte">
+                <img src="multimedia/Tyto_alba_tylluan_wen_detail.jpg" class="img1">
+                <ul>
+                    <li type="disc"><span>Caractéristiques physiques </span>: Les Strigiformes se distinguent par leurs
+                        grands yeux frontaux, adaptés à une vision nocturne exceptionnelle. Ils ont également une
+                        excellente audition, facilitée par des disques faciaux qui concentrent les sons vers leurs
+                        oreilles asymétriques.</li>
+                    <li type="disc"><span>Répartition </span>: Les hiboux et les chouettes sont présents sur tous les
+                        continents, à l'exception de l'Antarctique. Ils occupent une variété d'habitats, allant des
+                        forêts aux zones semi-arides, et sont souvent associés aux zones boisées.</li>
+                    <li type="disc"><span>Alimentation </span>: Les Strigiformes sont des prédateurs carnivores qui se
+                        nourrissent principalement de petits mammifères, d'insectes, de reptiles et d'autres oiseaux.
+                        Leurs serres et leur bec crochu sont adaptés à la capture et à la consommation de proies.</li>
+                    <li type="disc"><span>Vols silencieux </span>: Les Strigiformes sont connus pour leur vol
+                        silencieux. Leur plumage spécialisé permet d'atténuer le bruit du vol, ce qui est essentiel pour
+                        la chasse nocturne.</li>
+                    <li type="disc"><span>Comportement </span>: Les hiboux et les chouettes sont principalement
+                        nocturnes, ce qui signifie qu'ils sont actifs la nuit. Leur comportement de chasse est souvent
+                        solitaire, bien que certaines espèces puissent être plus sociales.</li>
+                    <li type="disc"><span>Reproduction </span>: Les Strigiformes construisent généralement des nids dans
+                        des endroits abrités, tels que des creux d'arbres, des cavités rocheuses ou des bâtiments
+                        abandonnés. La plupart sont monogames pendant la saison de reproduction.</li>
+                </ul>
+                <img src="multimedia/bubo-bubo-sibiricus-hibou-siberie-est-espece-oiseau-strigiformes-famille-strigides_545448-13417.jpg"
+                    class="img2">
+                <ul>
+                    <li type="disc"><span>Mimétisme </span>: Certains Strigiformes ont un plumage qui les camoufle
+                        efficacement avec leur environnement, ce qui les aide à se dissimuler pendant la journée
+                        lorsqu'ils sont inactifs.</li>
+                    <li type="disc"><span>Espèces notables </span>: Parmi les Strigiformes, on trouve des espèces
+                        emblématiques telles que le grand-duc d'Amérique, le hibou grand-duc, la chouette effraie et le
+                        hibou des marais.</li>
+                    <li type="disc"><span>Symbolisme </span>: Les hiboux et les chouettes sont souvent associés à des
+                        symboles dans différentes cultures, allant de la sagesse à la magie ou même à la malchance dans
+                        certaines traditions.</li>
+                    <li type="disc"><span>Conservation </span>: Certains Strigiformes peuvent être confrontés à des
+                        menaces telles que la perte d'habitat, la pollution, et parfois, la persécution directe. La
+                        conservation des habitats boisés et la sensibilisation sont importantes pour leur préservation.
+                    </li>
+                </ul>
+            </div>
+            <div class="conclu">Les Strigiformes sont des prédateurs nocturnes fascinants, jouant un rôle crucial dans
+                la régulation des populations d'insectes et de petits mammifères. Leurs adaptations spécifiques en font
+                des chasseurs redoutables dans l'obscurité de la nuit.</div>
+        </div>
+    </div>
+    <div class="comment">
+        <div>2 commentaires</div>
+        <div class="cmnt1">
+            <div class="cmnttext">
+                <div class="cmnttextleft">
+                    <img src="multimedia/woman-volunteer-icon.png" class="cmnttextpfp">
+                    <div class="lefticons">
+                        <a href="9profil.html"><img src="multimedia/utilisateur (1).png" title="Voir le profile"
+                                class="cmnticon"></a>
+                        <div>
+                            <label class="lab1">
+                                <input type="checkbox" class="checky">
+                                <div class="imgcont">
+                                    <img type="button" src="multimedia/ajouter-un-utilisateur (1).png"
+                                        class="cmnticon addimg" title="Envoyer une invitation">
+                                    <img type="button" src="multimedia/utilisateur (2).png" class="cmnticon sentimg"
+                                        title="Ton invitation a été envoyée avec succès">
+                                </div>
+
+                            </label>
+                        </div>
+                        <div class="btn-group" title="Signaler cet utilisateur !">
+                            <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown"><img
+                                    src="multimedia/exclamation-warning-round-black-icon.png" class="cmnticon">
+                            </button>
+                            <ul class="dropdown-menu dpmenu">
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Harcèlement"></li>
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Contenu indésirable"></li>
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Informations incorectes"></li>
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Image de profil inappropriée"></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="cmnttexttext">
+                    <div class="cmnterinfo">
+                        <div> Jade Frol, Manager</div>
+                        <div>06-01-2023 15:26</div>
+                    </div>
+                    <div class="cmnttexttexttext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+                        numquam maiores corporis dolores impedit, debitis amet ullam quaerat velit aspernatur eius!
+                        Praesentium facere tenetur sunt ipsam neque quis reiciendis sit.
+                    </div>
+                    <div class="cmnttexttexticons">
+                        <label for="eo"><input type="radio" class="zbtn1" name="euh" id="eo">
+                            <img src="multimedia/like.png" class="cmnttextexticon1">
+                        </label>
+                        <label for="oe"><input type="radio" class="zbtn2" name="euh" id="oe">
+                            <img src="multimedia/dislike.png" class="cmnttextexticon1">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cmnt1">
+            <div class="cmnttext">
+                <div class="cmnttextleft">
+                    <img src="multimedia/woman-volunteer-icon.png" class="cmnttextpfp">
+                    <div class="lefticons">
+                        <a href="9profil.html"><img src="multimedia/utilisateur (1).png" title="Voir le profile"
+                                class="cmnticon"></a>
+                        <div>
+                            <label class="lab1">
+                                <input type="checkbox" class="checky">
+                                <div class="imgcont">
+                                    <img type="button" src="multimedia/ajouter-un-utilisateur (1).png"
+                                        class="cmnticon addimg" title="Envoyer une invitation">
+                                    <img type="button" src="multimedia/utilisateur (2).png" class="cmnticon sentimg"
+                                        title="Ton invitation a été envoyée avec succès">
+                                </div>
+
+                            </label>
+                        </div>
+                        <div class="btn-group" title="Signaler cet utilisateur !">
+                            <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown"><img
+                                    src="multimedia/exclamation-warning-round-black-icon.png" class="cmnticon">
+                            </button>
+                            <ul class="dropdown-menu dpmenu">
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Harcèlement">
+                                </li>
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Contenu indésirable"></li>
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Informations incorectes"></li>
+                                <li><input type="submit" class="report"
+                                        onclick="alert('Votre signalement a été effectué avec succès.')"
+                                        value="Image de profil inappropriée"></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="cmnttexttext">
+                    <div class="cmnterinfo">
+                        <div> Jade Frol, Manager</div>
+                        <div>06-01-2023 15:26</div>
+                    </div>
+                    <div class="cmnttexttexttext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+                        numquam maiores corporis dolores impedit, debitis amet ullam quaerat velit aspernatur eius!
+                        Praesentium facere tenetur sunt ipsam neque quis reiciendis sit.
+                    </div>
+                    <div class="cmnttexttexticons">
+                        <label for="eoo"><input type="radio" class="zbtn1" name="euh" id="eoo">
+                            <img src="multimedia/like.png" class="cmnttextexticon1">
+                        </label>
+                        <label for="oer"><input type="radio" class="zbtn2" name="euh" id="oer">
+                            <img src="multimedia/dislike.png" class="cmnttextexticon1">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cmnt1">
+            <div class="cmnttext">
+                <div class="cmnttextleft">
+                    <img src="multimedia/man-user-color-icon.png" class="cmnttextpfp">
+
+                </div>
+                <div class="cmnttexttext">
+                    <form>
+                        <textarea class="inputcmnt" placeholder="Commentez ici"></textarea>
+                        <input type="submit" class="btn btn-primary float-end"
+                            onclick="alert('Votre message a été envoyé avec succès.')">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">• Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="https://#/" class="bottomfootlink">Mentions légales</a>
+            <a href="https://#/" class="bottomfootlink">Copyright</a>
+            <a href="https://#/" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        form {
+            background-color: #ffe9cf;
+            border-radius: 20px;
+            box-shadow: 0 0 20px 2px #CCCCCC;
+        }
+
+        .case {
+            width: 100%;
+            height: 40px;
+            border: none;
+            margin: 15px 0 0;
+        }
+
+        .bouton {
+            background-color: black;
+            color: #FFA033;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
+
+        .form-control {
+            border-left: 5px solid #000;
+            border-bottom: 1px solid #000;
+            border-top: 0;
+            border-right: 0;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+            border-color: #000;
+        }
+
+        /*.mdpoublie {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width:600px) {
+            form {}
+
+            .mdpoublie {
+                display: flex;
+                flex-direction: column;
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="container col-lg-5 mt-5 mx-auto mb-5">
+        <form action="1Acceuil.html" class="p-3">
+            <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">Nom d'utilisateur :</label>
+                <input type="text" class="form-control" id="uname" placeholder="Saisir votre nom d'utilisateur"
+                    name="uname" required minlength="8" maxlength="16">
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Mot de passe :</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Saisir votre mot de passe" name="pswd"
+                    minlength="8" required>
+            </div>
+            <div class="mdpoublie row col-lg">
+                <div class="mdpoublie1 col-md-6">
+                    <a href="#">Mot de passe oublié ?</a>
+                </div>
+                <div class="mdpoublie2 col-md-6 text-end">
+                    Pas de compte ? <a href="3Creer.html">En créer un !</a>
+                </div>
+            </div>
+            <input type="submit" value="Se connecter" class="case bouton">
+        </form>
+    </div>
+
+    <!---------------------------------------------------------->
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">• Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="#" class="bottomfootlink">Mentions légales</a>
+            <a href="#" class="bottomfootlink">Copyright</a>
+            <a href="#" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>

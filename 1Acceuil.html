@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Around the Globe</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .bodyx {
+            display: flex;
+            background-color: #FFF;
+        }
+
+        /****************/
+
+
+        .goup:hover {
+            background-color: #000000;
+        }
+
+
+        /*****************************************/
+        .banner {
+            width: 100%;
+        }
+
+        /*****************************************/
+        .main {
+            flex: 75%;
+            box-shadow: -0.1vw 0 0.3vw 0 #CCCCCC;
+        }
+
+        .propos {
+            margin: 8vw 0 0 0
+        }
+
+        .actu {
+            margin: 2vw 0 0 0;
+        }
+
+        .rare {
+            margin: 2vw 0 0 0;
+        }
+
+        .galerie {
+            margin: 2vw 0 8vw 0;
+        }
+
+        .title {
+            background-color: #FFCF99;
+            color: #333333;
+            font-size: 2.3vw;
+            font-weight: bolder;
+            padding: 0.6vw;
+            margin: 0vw 1vw 4vw;
+            border-top: 0.3vw solid #333333;
+        }
+
+        .propos1 {
+            font-size: 1.3vw;
+            width: 80%;
+            margin: auto;
+            text-indent: 2vw;
+            text-align: justify;
+        }
+
+        .arti {
+            display: flex;
+        }
+
+        .article {
+            width: 35%;
+            border-radius: 2vw;
+            background-color: #FFF3E6;
+            margin: 0 auto;
+            color: #333333;
+        }
+
+        .caption {
+            font-size: 1.5vw;
+            font-weight: 600;
+            text-align: center;
+            padding: 1.5vw;
+            margin-bottom: 0.9vw;
+        }
+
+        .img {
+            width: 100%;
+            border-top: 0.25vw dashed white;
+            border-bottom: 0.25vw dashed white;
+            box-sizing: border-box;
+        }
+
+        .info {
+            font-size: 1.3vw;
+            text-align: justify;
+            padding: 1.5vw;
+        }
+
+        .more {
+            font-size: 1.6vw;
+            border: 0.2vw solid;
+            border-radius: 2vw;
+            padding: 0.8vw;
+            background-color: #808080;
+            color: #FFA033;
+            text-decoration: none;
+            font-style: italic;
+            box-shadow: 0 0 0.07vw 0.07vw #CCCCCC;
+            width: 20%;
+        }
+
+        .more:hover {
+            background-color: #4D4D4D;
+            color: #FFA033;
+            box-shadow: 0 0 0.2vw 0.2vw #CCCCCC;
+            transform: scale(0.9);
+        }
+
+        .allmore {
+            margin: 2vw 0 0;
+            text-align: center;
+        }
+
+        /*********************************************/
+        .img2 {
+            width: 100%;
+            border: 0.1vw solid white;
+            border-radius: 2vw;
+            box-shadow: 0 0 0.5vw 0.08vw #CCCCCC;
+        }
+
+        .imgcap {
+            width: 28%;
+            margin: auto;
+            color: #333333;
+        }
+
+        .imgcap3 {
+            display: flex;
+            margin-bottom: 2vw;
+        }
+
+        .caption1 {
+            font-size: 1.2vw;
+            text-align: center;
+            margin-top: 0.5vw;
+        }
+
+        /*****************************************/
+        .aside {
+            flex: 25%;
+            box-shadow: 0.1vw 0 0.1vw 0 #CCCCCC;
+        }
+
+        /*****************************************/
+        .contact {
+            margin: 8vw 0 0 0;
+        }
+
+        .allcontact {
+            margin: 0 1vw
+        }
+
+        .contact1 {
+            display: flex;
+            align-items: center;
+            margin: 1vw 0;
+            border-top-right-radius: 2vw;
+            border-bottom-right-radius: 2vw;
+            background-color: #FFF3E6;
+            padding: 0.3vw 0.2vw;
+        }
+
+        .icon {
+            width: 3vw;
+            margin: 0vw 0.7vw 0 0.5vw;
+        }
+
+        .iconname {
+            font-size: 1.3vw;
+            text-decoration: none;
+            width: 100%;
+            color: #aa9fb4;
+        }
+
+        .iconname:hover {
+            transform: scale(0.95);
+        }
+
+        /*****************************************/
+        .media {
+            margin: 2vw 0 0 0;
+        }
+
+        .imgjour {
+            width: 100%;
+            border-bottom: 0.2vw solid #CCCCCC;
+            box-sizing: border-box;
+        }
+
+        .allimgjour {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1vw;
+            text-align: center;
+            margin: 0 1vw 0 1vw;
+            background-color: #FFF3E6;
+            border: 0.1vw solid #ffffff;
+            box-shadow: 0 0 0.3vw 0.3vw #E6E6E6;
+        }
+
+        .note {
+            margin-top: 0.5vw;
+            padding: 0vw 1vw 1vw;
+        }
+
+        /*****************************************/
+        .link {
+            margin: 2vw 0 0 0;
+        }
+
+        .alllink {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .link1 {
+            text-decoration: none;
+            font-style: italic;
+            font-size: 1.4vw;
+            color: #aa9fb4;
+            margin: 0 2vw 0.5vw 2vw;
+        }
+
+        .link1:hover {
+            transform: scale(0.95);
+        }
+
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        @media screen and (min-width : 601px) and (max-width:1000px) {
+            .goup {
+                padding: 1.5vw 3vw;
+                border-radius: 3vw;
+                border: 0.2vw solid #FF8901;
+            }
+
+            .bodyx {
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+            }
+
+            /*****************************************/
+            .banner {
+                display: none;
+            }
+
+            /*****************************************/
+            .main {
+                flex: 100%;
+                box-shadow: none;
+            }
+
+            .propos {
+                margin: 4vw 0 0 0
+            }
+
+            .actu {
+                margin: 2vw 0 0 0;
+            }
+
+            .rare {
+                margin: 2vw 0 0 0;
+            }
+
+            .galerie {
+                margin: 2vw 0 0 0;
+            }
+
+            .title {
+                font-size: 4.5vw;
+                padding: 1.2vw;
+                margin: 0vw 2vw 4vw;
+                border-top: 0.6vw solid;
+            }
+
+            .propos1 {
+                font-size: 2.6vw;
+                text-indent: 6vw;
+            }
+
+            .arti {
+                display: flex;
+            }
+
+            .article {
+                width: 45%;
+                border-radius: 2vw;
+                background-color: #FFF3E6;
+                margin: 0 auto;
+            }
+
+            .caption {
+                font-size: 2.5vw;
+                padding: 1.5vw;
+            }
+
+            .img {
+                width: 100%;
+                border-top: 0.5vw dashed white;
+                border-bottom: 0.5vw dashed white;
+            }
+
+            .info {
+                font-size: 2.3vw;
+                padding: 2.5vw;
+            }
+
+            .more {
+                font-size: 2.3vw;
+                border: 0.4vw solid;
+                border-radius: 4vw;
+                padding: 1.6vw;
+                box-shadow: 0 0 0.14vw 0.14vw #CCCCCC;
+                width: 25%;
+            }
+
+            .more:hover {
+                box-shadow: 0 0 0.3vw 0.3vw #CCCCCC;
+            }
+
+            /*********************************************/
+            .allimgcap {
+                display: flex;
+            }
+
+            .img2 {
+                width: 100%;
+                border: 0.2vw solid white;
+                border-radius: 4vw;
+            }
+
+            .imgcap {
+                width: 90%;
+                margin: 0 auto 1vw;
+            }
+
+            .imgcap3 {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .caption1 {
+                font-size: 2.5vw;
+                margin-top: 0.7vw;
+            }
+
+            /*****************************************/
+            .aside {
+                flex: 100%;
+                box-shadow: none;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            /*****************************************/
+            .contact {
+                margin: 2vw 0 0 0;
+                width: 60%;
+            }
+
+            .allcontact {
+                margin: 0 2vw;
+            }
+
+            .contact1 {
+                margin: 2vw 0;
+                border-top-right-radius: 4vw;
+                border-bottom-right-radius: 4vw;
+                padding: 0.6vw 0.4vw;
+            }
+
+            .icon {
+                width: 6vw;
+                margin: 0vw 1.5vw 0 1vw;
+            }
+
+            .iconname {
+                font-size: 2.7vw;
+            }
+
+            /*****************************************/
+            .media {
+                margin: 2vw 0 0 0;
+                width: 100%;
+            }
+
+            .imgjour {
+                width: 100%;
+                border-bottom: 0.4vw solid #CCCCCC;
+            }
+
+            .allimgjour {
+                width: 80%;
+                font-size: 2.3vw;
+                text-align: center;
+                margin: 0 auto;
+                background-color: #FFF3E6;
+                border: 0.2vw solid #E6E6E6;
+                box-shadow: 0 0 0.6vw 0.6vw #CCCCCC;
+            }
+
+            .note {
+                margin-top: 1vw;
+                padding: 0vw 2vw 1vw;
+            }
+
+            /*****************************************/
+            .link {
+                margin: 2vw 0 0 0;
+                width: 40%;
+            }
+
+            .link1 {
+                font-size: 2.7vw;
+                margin: 0 2vw 1vw 2vw;
+            }
+
+            .link1:hover {
+                transform: scale(0.95);
+            }
+        }
+
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+        /*****************************************/
+
+        @media screen and (max-width : 600px) {
+            .goup {
+                right: 85%;
+                padding: 2.5vw 4.5vw;
+                border-radius: 5vw;
+                border: 0.3vw solid #FF8901;
+            }
+
+            /*****************************************/
+            .banner {
+                display: none;
+            }
+
+            /*****************************************/
+            .bodyx {
+                display: flex;
+                background-color: #FFF;
+                flex-direction: column-reverse;
+            }
+
+            /*****************************************/
+            .main {
+                flex: none;
+                box-shadow: none;
+            }
+
+            .propos {
+                margin: 4vw 0 0 0
+            }
+
+            .actu {
+                margin: 4vw 0 0 0;
+            }
+
+            .rare {
+                margin: 4vw 0 0 0;
+            }
+
+            .galerie {
+                margin: 4vw 0 0 0;
+            }
+
+            .propos1 {
+                font-size: 4vw;
+                text-indent: 8vw;
+            }
+
+            .title {
+                font-size: 6.9vw;
+                font-weight: bolder;
+                padding: 1.6vw;
+                margin: 0vw 3vw 4vw;
+                border-top: 1vw solid;
+            }
+
+            .arti {
+                flex-direction: column;
+            }
+
+            .article {
+                width: 80%;
+                margin: 4vw auto;
+                border-radius: 6vw;
+            }
+
+            .caption {
+                font-size: 4.5vw;
+                padding: 4.5vw;
+                margin-bottom: 0vw;
+            }
+
+            .img {
+                width: 100%;
+                border-top: 1vw dashed white;
+                border-bottom: 1vw dashed white;
+            }
+
+            .info {
+                font-size: 4vw;
+                padding: 4.5vw;
+            }
+
+            .more {
+                font-size: 4.6vw;
+                border: 0.6vw solid;
+                border-radius: 6vw;
+                padding: 2vw 4.5vw;
+                box-shadow: 0 0 0.2vw 0.2vw #CCCCCC;
+                width: 40%;
+            }
+
+            .more:hover {
+                box-shadow: 0 0 0.6vw 0.6vw #CCCCCC;
+            }
+
+            .allmore {
+                margin: 0vw auto;
+            }
+
+            /*********************************************/
+            .img2 {
+                border: 0.3vw solid white;
+                border-radius: 6vw;
+                box-shadow: 0 0 1.5vw 0.24vw #CCCCCC;
+            }
+
+            .imgcap {
+                width: 80%;
+                margin-bottom: 4vw;
+            }
+
+            .imgcap3 {
+                display: flex;
+                margin-bottom: 0vw;
+                flex-direction: column;
+            }
+
+            .caption1 {
+                font-size: 3.6vw;
+                margin-top: 1.5vw;
+            }
+
+            /*****************************************/
+            .aside {
+                flex: none;
+                box-shadow: none;
+            }
+
+            /*****************************************/
+            .contact {
+                margin: 4vw 0 0 0;
+                width: 100%;
+            }
+
+            .allcontact {
+                width: 80%;
+                margin: auto;
+            }
+
+            .contact1 {
+                margin: 3vw 0;
+                border-top-right-radius: 6vw;
+                border-bottom-right-radius: 6vw;
+                background-color: #FFF3E6;
+                padding: 1vw 0.6vw;
+            }
+
+            .icon {
+                width: 9vw;
+                margin: 0vw 2vw 0 0.5vw;
+            }
+
+            .iconname {
+                font-size: 4vw;
+                text-decoration: none;
+                width: 100%;
+                color: #aa9fb4;
+            }
+
+            .iconname:hover {
+                transform: scale(0.95);
+            }
+
+            /*****************************************/
+            .media {
+                margin: 4vw 0 0 0;
+                width: 100%;
+            }
+
+            .imgjour {
+                border-bottom: 0.5vw solid #CCCCCC;
+            }
+
+            .allimgjour {
+                width: 80%;
+                margin: auto;
+                font-size: 3vw;
+                background-color: #FFF3E6;
+                border: 0.3vw solid #ffffff;
+                box-shadow: 0 0 1vw 1vw #CCCCCC;
+            }
+
+            .note {
+                margin-top: 1.5vw;
+                padding: 0vw 3vw 3vw;
+            }
+
+            /*****************************************/
+            .link {
+                margin: 4vw 0 0 0;
+                width: 100%;
+            }
+
+            .alllink {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .link1 {
+                font-size: 4vw;
+                color: #aa9fb4;
+                width: 80%;
+                margin: 1vw auto;
+            }
+        }
+
+        /*****************************************/
+    </style>
+</head>
+
+<body>
+    <a href="#" title="Défiler vers le haut">
+        <div class="goup">↑</div>
+    </a>
+    <div class="header">
+        <div class="logoxname">
+            <img src="multimedia/logo.jpg" class="logo">
+            <div class="sitename">Birds Around the Globe</div>
+        </div>
+        <div class="searchbar">
+            <input type="search" title="Effectuez une recherche" placeholder="Rechercher..." class="rechercher">
+        </div>
+        <div class="login">
+            <a href="2Connecter.html" target="_blank" class="connecter">Se connecter</a>
+            <a href="3Creer.html" target="_blank" class="creer">S'inscrire</a>
+        </div>
+    </div>
+    <div>
+        <img src="multimedia/banner.jpg" class="banner">
+    </div>
+    <div class="navbar">
+        <a href="1Acceuil.html" class="nav">Acceuil</a>
+        <a href="4Encyclopedie.html" class="nav">Encyclopédie</a>
+        <a href="#" class="nav">Contact</a>
+        <a href="10Boutique.html" class="nav">Boutique</a>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="resnavbar bg">
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="dropdown-toggle btn" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn" href="1Acceuil.html">Acceuil</a></li>
+                    <li><a class="dropdown-item btn" href="4Encyclopedie.html">Encyclopédie</a></li>
+                    <li><a class="dropdown-item btn" href="#">Contact</a></li>
+                    <li><a class="dropdown-item btn" href="10Boutique.html">Boutique</a></li>
+                    <hr>
+                    <hr>
+                    <li><a class="dropdown-item btn butt" href="2Connecter.html">Se connecter</a></li>
+                    <li><a class="dropdown-item btn butt" href="3Creer.html">Créer un compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="bodyx">
+        <div class="aside">
+            <div class="contact">
+                <div class="title">Nous Suivre</div>
+                <div class="allcontact">
+                    <div class="contact1">
+                        <div><img src="multimedia/facebook.png" class="icon"></div>
+                        <a href="#" class="iconname" title="Suivez nous sur Facebook">facebook.com/birds.around</a>
+                    </div>
+                    <div class="contact1">
+                        <div><img src="multimedia/twitter.png" class="icon"></div>
+                        <a href="#" class="iconname" title="Suivez nous sur Twitter">twitter.com/Birdsaround</a>
+                    </div>
+                    <div class="contact1">
+                        <div><img src="multimedia/instagram.png" class="icon"></div>
+                        <a href="#" class="iconname" title="Suivez nous sur Instagram">instagram.com/birdsaround/</a>
+                    </div>
+                </div>
+            </div>
+            <div class="link">
+                <div class="title">Liens Utiles</div>
+                <div class=alllink>
+                    <a href="https://fr.wikipedia.org/wiki/Oiseau" class="link1">• Encyclopédie d'oiseaux.</a>
+                    <a href="https://species.wikimedia.org/wiki/Accueil?uselang=fr" class="link1">• Apprendre plus sur
+                        les espèces d'oiseaux.</a>
+                </div>
+            </div>
+            <div class="media">
+                <div class="title">Image du Jour</div>
+                <div class="allimgjour">
+                    <img src="multimedia/imagedujour.jpg" class="imgjour">
+                    <div class="note">Portrait De Grue Couronnée Grise Ou Balearica Regulorum Avec Ses Plumes Dorées
+                        Rigides Sur La Tête Dans Le Champ Regardant La Caméra
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="propos">
+                <div class="title">À propos</div>
+                <div class="propos1">
+                    Bienvenue sur <strong>Birds Around the Globe</strong>, votre destination incontournable pour
+                    explorer le fascinant monde des oiseaux !
+                </div>
+                <div class="propos1">
+                    Notre mission est de fournir un espace virtuel complet où la beauté, la complexité et l'importance
+                    des oiseaux sont célébrées. Explorez des profils détaillés d'espèces, plongez dans des articles
+                    informatifs, admirez des photographies captivantes et découvrez des faits fascinants sur leurs
+                    comportements, leurs habitats et leur rôle essentiel dans l'écosystème.
+                </div>
+            </div>
+            <div class="actu">
+                <div class="title">Nos Derniers Articles</div>
+                <div class="arti">
+                    <div class="article">
+                        <div class="caption">Le toucan à carène, une beauté sans égale!</div>
+                        <div><a href="8image1.html" target="_blank" title="Agrandir l'image"><img
+                                    src="multimedia/Toucan1.jpg" class="img"></a></div>
+                        <div class="info">Le toucan à carène se nourrit principalement de fruits et de graines, mais il
+                            lui arrive aussi de consommer des œufs, des insectes, et même des lézards, des oisillons,
+                            des grenouilles et d'autres petits animaux.</div>
+                    </div>
+                    <div class="article">
+                        <div class="caption">Harfang des neiges, en voie de disparition</div>
+                        <div><a href="7image2.html" target="_blank" title="Agrandir l'image"><img
+                                    src="multimedia/harfang-des-neiges.webp" class="img"></a></div>
+                        <div class="info">Avec son plumage d'un blanc immaculé dans lequel disparaît en partie son bec,
+                            il parvient à se fondre parfaitement dans son environnement. Le harfang des neiges se
+                            rencontre dans la toundra arctique où il semble préférer les zones ouvertes parsemées de
+                            végétation et de rochers, jamais très loin du littoral.</div>
+                    </div>
+                </div>
+                <form action="#" class="allmore">
+                    <input type="submit" value="En savoir plus" class="more">
+                </form>
+            </div>
+            <div class="rare">
+                <div class="title">Oiseaux Rares</div>
+                <div class="arti">
+                    <div class="article">
+                        <div class="caption">Les grues blanches, oiseaux les plus rares du monde</div>
+                        <div><img src="multimedia/Grues-blanches.webp" class="img"></div>
+                        <div class="info">La charismatique grue blanche d’Amérique est souvent perçue comme l'une des
+                            figures de proue des espèces en voie de disparition et des enjeux liés à la restauration des
+                            habitats. Du haut de ses 1,5 mètre de haut et dotée d'ailes de 2 mètres d'envergure, il
+                            s’agit de l’espèce d’oiseaux la plus grande d'Amérique du Nord. À l’état sauvage, elles
+                            vivent en moyenne plus de 20 ans.</div>
+                    </div>
+                    <div class="article">
+                        <div class="caption">Pithécophage des Philippines</div>
+                        <div><img src="multimedia/Pithecophage des Philippines.jpg" class="img"></div>
+                        <div class="info">Espèce d'aigle de l'ordre des Accipitriformes, endémique des Philippines et
+                            habitant des forêts ou des jungles de montagnes où se trouvent des arbres de grande hauteur
+                            qui leur permettent de nidifier. C'est un oiseau qui mesure plus d'un mètre de longueur et
+                            plus de 2 mètres d'envergure alaire, il se nourrit de singes et de lémuriens.</div>
+                    </div>
+                </div>
+                <div class="allmore">
+                    <form action="#">
+                        <input type="submit" value="En savoir plus" class="more">
+                    </form>
+                </div>
+            </div>
+            <div class="galerie">
+                <div class="title">Galerie</div>
+                <div class="allimgcap">
+                    <div class="imgcap3">
+                        <div class="imgcap">
+                            <div><img src="multimedia/Hawk.jpg" class="img2"></div>
+                            <div class="caption1">Hawk</div>
+                        </div>
+                        <div class="imgcap">
+                            <div><img src="multimedia/Gull.jpg" class="img2"></div>
+                            <div class="caption1">Gull</div>
+                        </div>
+                        <div class="imgcap">
+                            <div><img src="multimedia/Parrot.jpg" class="img2"></div>
+                            <div class="caption1">Parrot</div>
+                        </div>
+                    </div>
+                    <div class="imgcap3">
+                        <div class="imgcap">
+                            <div><img src="multimedia/Swan.jpg" class="img2"></div>
+                            <div class="caption1">Swan</div>
+                        </div>
+                        <div class="imgcap">
+                            <div><img src="multimedia/Owl.jpg" class="img2"></div>
+                            <div class="caption1">Owl</div>
+                        </div>
+                        <div class="imgcap">
+                            <div><img src="multimedia/Stark.jpg" class="img2"></div>
+                            <div class="caption1">Stark</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="allmore">
+                    <form action="#">
+                        <input type="submit" value="Afficher plus" class="more">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="topfoot">
+            <div class="footer1">
+                <div class="topfoottitle">Coordonnées de contact</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Gmail">• birdsaround@gmail.com</a>
+                    <a href="#" class="topfootinfolink" title="Contactez nous via Whatsapp">• +33 6 12 34 56 78</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Réseaux sociaux</div>
+                <div class="topfootinfo">
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Facebook">• Facebook</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Twitter">• Twiiter</a>
+                    <a href="#" class="topfootinfolink" title="Suivez nous sur Instagram">• Instagram</a>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="topfoottitle">Utilité </div>
+                <div class="topfootinfo">
+                    <a href="4Encyclopedie.html" class="topfootinfolink" title="Se diriger vers notre encyclopédie">•
+                        Encylopédie</a>
+                    <a href="2Connecter.html" class="topfootinfolink"
+                        title="Connectez-vous si vous possédez un compte !">• Se connecter</a>
+                    <a href="3Creer.html" class="topfootinfolink" title="Créer un compte gratuitement">• Créer un
+                        compte</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfoot">
+            <a href="#" class="bottomfootlink">Mentions légales</a>
+            <a href="#" class="bottomfootlink">Copyright</a>
+            <a href="#" class="bottomfootlink">Politique de confidentialité</a>
+        </div>
+    </div>
+</body>
+
+</html>
